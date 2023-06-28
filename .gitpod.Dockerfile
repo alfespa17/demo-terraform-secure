@@ -5,7 +5,7 @@ USER gitpod
 RUN yarn global add snyk && \
     pip install checkov && \
     curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash && \
-    curl -L "$(curl -s https://api.github.com/repos/tenable/terrascan/releases/latest | grep -o -E "https://.+?_Linux_x86_64.tar.gz")" > terrascan.tar.gz && \
-    tar -xf terrascan.tar.gz terrascan && rm terrascan.tar.gz && \
-    install terrascan /usr/local/bin && rm terrascan
+    curl -L https://github.com/tenable/terrascan/releases/download/v1.18.1/terrascan_1.18.1_Linux_x86_64.tar.gz -o terrascan.tar.gz && \
+    tar -xvzf terrascan.tar.gz && \
+    cp terrascan /usr/local/bin
 
