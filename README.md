@@ -2,32 +2,36 @@
 
 This repository contains a gitpod workspace with the following tools that can be used to do static code analysis of terraform code
 
-- snyk
-- tfsec
-- terrascan
-- checkov
+- [snyk](https://github.com/snyk/cli)
+- [tfsec](https://github.com/aquasecurity/tfsec)
+- [terrascan](https://github.com/tenable/terrascan)
+- [checkov](https://github.com/bridgecrewio/checkov)
 
 It also contains some vulnerable terraform code from [tenable/KaiMonkey repository](https://github.com/tenable/KaiMonkey) as an example
 
 ## Terrascan
 
 ```bash
-cd KaiMonkey/terraform/
-terrascan scan -t aws
+terrascan scan KaiMonkey/terraform/aws/module/compute
+terrascan scan KaiMonkey/terraform/aws/module/compute -o json
+terrascan scan KaiMonkey/terraform/aws/module/compute -o yaml
 ```
 
 ## Tfsec
 
 ```bash
-cd KaiMonkey/terraform/
-tfsec aws
+tfsec KaiMonkey/terraform/aws/modules/compute/
+tfsec KaiMonkey/terraform/aws/modules/compute/ --format json
+tfsec KaiMonkey/terraform/aws/modules/compute/ -O tfsec.json --format json
 ```
 
 ## Checkov
 
 ```bash
-cd KaiMonkey/terraform/
-checkov --directory aws/
+checkov --file KaiMonkey/terraform/aws/main.tf 
+checkov --file KaiMonkey/terraform/aws/main.tf  -o yaml
+checkov --directory KaiMonkey/terraform/aws/modules/compute/
+checkov --directory KaiMonkey/terraform/aws/modules/compute/ -o json
 ```
 
 ## Snyk
