@@ -1,0 +1,3 @@
+[submodule "KaiMonkey"]
+	path = KaiMonkey
+	url = https://github.com/tenable/KaiMonkey
