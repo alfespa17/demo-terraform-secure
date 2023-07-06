@@ -1,4 +1,4 @@
-# Terraform Security Scanning Demo
+# Terraform Security Scanning Demo [![gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/alfespa17/demo-terraform-secure)
 
 This repository contains a gitpod workspace with the following tools that can be used to do static code analysis of terraform code
 
