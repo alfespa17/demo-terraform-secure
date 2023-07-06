@@ -12,9 +12,9 @@ It also contains some vulnerable terraform code from [tenable/KaiMonkey reposito
 ## Terrascan
 
 ```bash
-terrascan scan KaiMonkey/terraform/aws/module/compute
-terrascan scan KaiMonkey/terraform/aws/module/compute -o json
-terrascan scan KaiMonkey/terraform/aws/module/compute -o yaml
+terrascan scan -d KaiMonkey/terraform/aws/modules/compute
+terrascan scan -d KaiMonkey/terraform/aws/modules/compute -o json
+terrascan scan -d KaiMonkey/terraform/aws/modules/compute -o yaml
 ```
 
 ## Tfsec
